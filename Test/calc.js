@@ -1,1 +1,0 @@
-console.log(sub(2,4))

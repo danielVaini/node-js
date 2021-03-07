@@ -1,3 +1,6 @@
-function div(a, b){
+const div = (a, b) => {
   return a / b;
 }
+
+
+module.exports = div;
