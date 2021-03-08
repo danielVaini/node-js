@@ -15,7 +15,7 @@ app.get('/blog', (req, res) => {
 })
 
 app.get('/ola/:nome/:cargo/:cor', (req, res) => {
-  res.send('<h1> Olá ' + req.params.nome + '</h1>' +
+  res.send('<h1> Ola ' + req.params.nome + '</h1>' +
   '<h2> Seu cargo e: '+ req.params.cargo + '</h2>' +
   '<h3> Sua cor favorita e: '+ req.params.cor + '</h3>'); // Send só envia uma vez por rota
 
