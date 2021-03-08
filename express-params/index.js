@@ -14,8 +14,11 @@ app.get('/blog', (req, res) => {
   res.send('Bem vindo ao meu blog')
 })
 
-app.get('/ola/:nome', (req, res) => {
-  res.send(req.params)
+app.get('/ola/:nome/:cargo/:cor', (req, res) => {
+  res.send('<h1> Olá ' + req.params.nome + '</h1>' +
+  '<h2> Seu cargo e: '+ req.params.cargo + '</h2>' +
+  '<h3> Sua cor favorita e: '+ req.params.cor + '</h3>'); // Send só envia uma vez por rota
+
 })
 
 app.listen(3333,() => {
