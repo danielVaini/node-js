@@ -15,7 +15,7 @@ app.get('/blog', (req, res) => {
 })
 
 app.get('/ola/:nome', (req, res) => {
-  res.send(`Olá`)
+  res.send(req.params)
 })
 
 app.listen(3333,() => {
