@@ -20,7 +20,7 @@ const Sequelize = require('sequelize').Sequelize;
 // Routes
 
   app.get('/cad', (req,res) => {
-    res.send('Rota de cadastro de post')
+    res.render('formulario')
   })
 
 app.listen(3333,() => {
