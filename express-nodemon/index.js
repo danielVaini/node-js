@@ -23,6 +23,10 @@ const Sequelize = require('sequelize').Sequelize;
     res.render('formulario')
   })
 
+  app.post('/add', (req,res) => {
+    res.send('FORMULARIO RECEBIDO')
+  })
+
 app.listen(3333,() => {
   console.log('Conected')
 })
