@@ -17,6 +17,12 @@ const Sequelize = require('sequelize').Sequelize;
     dialect: 'mysql'
   });
 
+// Routes
+
+  app.get('/cad', (req,res) => {
+    res.send('Rota de cadastro de post')
+  })
+
 app.listen(3333,() => {
   console.log('Conected')
 })
