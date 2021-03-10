@@ -14,7 +14,7 @@ const Sequelize = require('sequelize').Sequelize;
   // Body parser
   app.use(express.urlencoded({extended: false}))
   app.use(express.json())
-  
+
   // Connecting with database
   const sequelize = new Sequelize('test', 'root', '', {
     host: 'localhost',
@@ -28,7 +28,8 @@ const Sequelize = require('sequelize').Sequelize;
   })
 
   app.post('/add', (req,res) => {
-    res.send('FORMULARIO RECEBIDO')
+    req.body.conteudo
+    res.send(`Texto: ${req.body.titulo} Conteudo: ${req.body.conteudo}`)
   })
 
 app.listen(3333,() => {
