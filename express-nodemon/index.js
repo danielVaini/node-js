@@ -8,30 +8,30 @@ const Sequelize = require('sequelize').Sequelize;
 
 
 // Config
-  // Template Engine
-    app.engine('handlebars', handlebars({defaultLayout: 'main'}))
-    app.set('view engine', 'handlebars')
-  // Body parser
-  app.use(express.urlencoded({extended: false}))
-  app.use(express.json())
+// Template Engine
+app.engine('handlebars', handlebars({ defaultLayout: 'main' }))
+app.set('view engine', 'handlebars')
+// Body parser
+app.use(express.urlencoded({ extended: false }))
+app.use(express.json())
 
-  // Connecting with database
-  const sequelize = new Sequelize('test', 'root', '', {
-    host: 'localhost',
-    dialect: 'mysql'
-  });
+// Connecting with database
+const sequelize = new Sequelize('test', 'root', '', {
+  host: 'localhost',
+  dialect: 'mysql'
+});
 
 // Routes
 
-  app.get('/cad', (req,res) => {
-    res.render('formulario')
-  })
+app.get('/cad', (req, res) => {
+  res.render('formulario')
+})
 
-  app.post('/add', (req,res) => {
-    req.body.conteudo
-    res.send(`Texto: ${req.body.titulo} Conteudo: ${req.body.conteudo}`)
-  })
+app.post('/add', (req, res) => {
+  req.body.conteudo
+  res.send(`Texto: ${req.body.titulo} Conteudo: ${req.body.conteudo}`)
+})
 
-app.listen(3333,() => {
+app.listen(3333, () => {
   console.log('Conected')
 })
