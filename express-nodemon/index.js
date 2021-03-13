@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const handlebars = require('express-handlebars');
 
-const Sequelize = require('sequelize').Sequelize;
+
 
 
 
@@ -15,11 +15,7 @@ app.set('view engine', 'handlebars')
 app.use(express.urlencoded({ extended: false }))
 app.use(express.json())
 
-// Connecting with database
-const sequelize = new Sequelize('test', 'root', '', {
-  host: 'localhost',
-  dialect: 'mysql'
-});
+
 
 // Routes
 
