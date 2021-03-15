@@ -1,7 +1,7 @@
 const Sequelize = require('sequelize').Sequelize;
 
 // Connecting with database
-const sequelize = new Sequelize('test', 'root', '', {
+const sequelize = new Sequelize('postapp', 'root', '', {
   host: 'localhost',
   dialect: 'mysql'
 });
