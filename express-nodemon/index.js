@@ -17,7 +17,7 @@ const Post = require('./models/Post');
 // Routes
 
   app.get('/',(req, res) => {
-    Post.findAll().then((posts) => {
+    Post.findAll({order: [['id', 'DESC']]}).then((posts) => {
       res.render('home', {
         post: posts
       });
