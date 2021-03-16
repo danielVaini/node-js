@@ -43,6 +43,18 @@ const Post = require('./models/Post');
     // res.send(`Texto: ${req.body.titulo} Conteudo: ${req.body.conteudo}`)
   })
 
+
+  app.get('/deletar/:id',(req,res) => {
+    Post.destroy({where: {
+      'id': req.params.id,
+    }}).then(() => {
+      res.send('Post deleting whit sucess')
+    }).catch((err) => {
+      res.send('This post is not exist')
+      
+    })
+  })
+
   app.listen(3333, () => {
     console.log('Conected')
   })
