@@ -8,6 +8,7 @@ const Post = require('./models/Post');
   // Template Engine
   app.engine('handlebars', handlebars({ defaultLayout: 'main' }))
   app.set('view engine', 'handlebars')
+  
   // Body parser
   app.use(express.urlencoded({ extended: false }))
   app.use(express.json())

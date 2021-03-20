@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+
+// Olá 
 app.get('/', (req, res) => {
   res.send('Hello worlld')
 })
@@ -15,4 +17,5 @@ app.get('/blog', (req, res) => {
 
 app.listen(3333,() => {
   console.log('Conected')
+  
 })
